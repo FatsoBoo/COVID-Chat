@@ -164,7 +164,7 @@ function send(text) {
 
     $.ajax(settings).done(function(response) {
         console.log(response);
-        newRecievedMessage(JSON.stringify(response, undefined, 2));
+        newRecievedMessage(JSON.stringify(JSON.parse(JSON.stringify(response, undefined, 1))["answers"][0].answer));
 
     });
 }
