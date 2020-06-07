@@ -133,31 +133,6 @@ $('document').ready(function() {
 // Creates a new Div with the users text, and recieves a response message from API.AI 
 function send(text) {
 
-    // let options = {
-    //     "method": 'POST',
-    //     "baseUrl": "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en",
-    //     "url": 'translate',
-    //     "qs": {
-    //         'api-version': '3.0',
-    //         'to': ['en']
-    //     },
-    //     "headers": {
-    //         'Ocp-Apim-Subscription-Key': '4654cf39d5f44f47ae06e41a83b9c8f1',
-    //         'Content-Type': 'application/json',
-    //         'X-ClientTraceId': uuidv4().toString()
-    //     },
-    //     "body": [{
-    //         'text': "I want to say hi"
-    //     }],
-    //     "json": true,
-    // };
-
-
-    // $.ajax(options).done(function(response) {
-    //     userEng = JSON.parse(response).translations[0];
-    // })
-
-
     // Create a div with the text that the user typed in
     $chatlogs.append(
         $('<div/>', { 'class': 'chat self' }).append(
@@ -177,11 +152,11 @@ function send(text) {
     // AJAX post request, sends the users text to API.AI and 
     // calls the method newReceivedMessage with the response from API.AI
     var settings = {
-        "url": "https://covid-chat-ai.azurewebsites.net/qnamaker/knowledgebases/a4678386-e6d5-4134-b406-82cfd9457895/generateAnswer",
+        "url": "https://covid-chatbot2.azurewebsites.net/qnamaker/knowledgebases/e7e98085-7d58-4211-8eb4-b24eeb5c2f17/generateAnswer",
         "method": "POST",
         "timeout": 1000,
         "headers": {
-            "Authorization": "EndpointKey b0086790-1bc4-4670-a63c-0380a9632705",
+            "Authorization": "EndpointKey da63edab-0ba7-43b9-b5c0-649712b3b092",
             "Content-Type": "application/json",
         },
         "data": "{ 'question':" + "'" + text + "' }",
