@@ -177,11 +177,11 @@ function send(text) {
     // AJAX post request, sends the users text to API.AI and 
     // calls the method newReceivedMessage with the response from API.AI
     var settings = {
-        "url": "https://covid-chat-ai.azurewebsites.net/qnamaker/knowledgebases/a4678386-e6d5-4134-b406-82cfd9457895/generateAnswer",
+        "url": "https://covid-chatbot2.azurewebsites.net/qnamaker/knowledgebases/e7e98085-7d58-4211-8eb4-b24eeb5c2f17/generateAnswer",
         "method": "POST",
         "timeout": 1000,
         "headers": {
-            "Authorization": "EndpointKey b0086790-1bc4-4670-a63c-0380a9632705",
+            "Authorization": "EndpointKey da63edab-0ba7-43b9-b5c0-649712b3b092",
             "Content-Type": "application/json",
         },
         "data": "{ 'question':" + "'" + text + "' }",
