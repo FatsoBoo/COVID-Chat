@@ -133,31 +133,6 @@ $('document').ready(function() {
 // Creates a new Div with the users text, and recieves a response message from API.AI 
 function send(text) {
 
-    // let options = {
-    //     "method": 'POST',
-    //     "baseUrl": "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en",
-    //     "url": 'translate',
-    //     "qs": {
-    //         'api-version': '3.0',
-    //         'to': ['en']
-    //     },
-    //     "headers": {
-    //         'Ocp-Apim-Subscription-Key': '4654cf39d5f44f47ae06e41a83b9c8f1',
-    //         'Content-Type': 'application/json',
-    //         'X-ClientTraceId': uuidv4().toString()
-    //     },
-    //     "body": [{
-    //         'text': "I want to say hi"
-    //     }],
-    //     "json": true,
-    // };
-
-
-    // $.ajax(options).done(function(response) {
-    //     userEng = JSON.parse(response).translations[0];
-    // })
-
-
     // Create a div with the text that the user typed in
     $chatlogs.append(
         $('<div/>', { 'class': 'chat self' }).append(
